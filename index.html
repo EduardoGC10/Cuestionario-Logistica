@@ -72,6 +72,16 @@
     <div class="form-box">
       <h2 class="text-center">Cuestionario</h2>
       <form id="formulario" action="https://script.google.com/macros/s/AKfycbwbTQgdH-3gaaEI1pf-BrZw7G9a_87XVTG_L7bpAtN6PZd6p9IRDmhf6bR07dGTFbIvFw/exec" method="post">
+        <!-- Campos para nombre y departamento -->
+        
+        <div class="form-group">
+          <label for="nombre">Nombre:</label>
+          <input type="text" class="form-control custom-input" id="nombre" name="Nombre" placeholder="Escribe tu nombre" required>
+        </div>
+        <div class="form-group">
+          <label for="departamento">Departamento:</label>
+          <input type="text" class="form-control custom-input" id="departamento" name="Departamento" placeholder="Escribe tu departamento" required>
+        </div>
         <!-- Pregunta 1 --> 
         <div class="form-group">
           <label for="pregunta1">1. ¿Para qué sirve el plan de tráfico?</label>
@@ -156,8 +166,8 @@
         <!-- Copia el contenido de las preguntas aquí como en la estructura de la Pregunta 1 -->
 
         <div class="text-center">
-          <button type="submit" class="btn btn-outline-success">Enviar</button>
-          <button type="button" id="limpiar" class="btn btn-outline-warning">Limpiar</button>
+          <button type="submit" class="btn btn-outline-success">ENVIAR</button>
+          <button type="button" id="limpiar" class="btn btn-outline-warning">LIMPIAR</button>
         </div>
       </form>
 
@@ -197,13 +207,13 @@
         let resultado = "";
         let clase = "";
         if (puntaje <= 2) {
-            resultado = `¡Debes mejorar! Tu conocimiento sobre las normas de seguridad es insuficiente. Respuestas correctas: ${puntaje} de ${totalPreguntas}.`;
+            resultado = `¡Debes mejorar! Tu conocimiento es insuficiente. Respuestas correctas: ${puntaje} de ${totalPreguntas}.`;
             clase = "resultado-debe-mejorar";
         } else if (puntaje <= 4) {
             resultado = `¡Bueno! Tienes un conocimiento básico, pero aún hay áreas para mejorar. Respuestas correctas: ${puntaje} de ${totalPreguntas}.`;
             clase = "resultado-bueno";
         } else {
-            resultado = `¡Excelente! Tienes un gran conocimiento sobre las normas de seguridad. Respuestas correctas: ${puntaje} de ${totalPreguntas}.`;
+            resultado = `¡Excelente! Tienes un gran conocimiento ¡Excelente!. Respuestas correctas: ${puntaje} de ${totalPreguntas}.`;
             clase = "resultado-excelente";
         }
 
